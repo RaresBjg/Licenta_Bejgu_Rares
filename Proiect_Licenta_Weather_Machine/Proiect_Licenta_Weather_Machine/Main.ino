@@ -63,7 +63,7 @@ void setup() {
   Serial.setDebugOutput(true);
   Serial.println();
   robot_setup();
-  pinMode(gpLed, OUTPUT); //Light
+  pinMode(gpLed, OUTPUT); 
   digitalWrite(gpLed, LOW);
 
   camera_config_t config;
@@ -87,7 +87,6 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.pixel_format = PIXFORMAT_JPEG;
-  //init with high specs to pre-allocate larger buffers
   if(psramFound()){
     config.frame_size = FRAMESIZE_UXGA;
     config.jpeg_quality = 10;
@@ -125,7 +124,5 @@ void setup() {
 
 void loop() 
 {
-  
-// put your main code here, to run repeatedly:
 
 }
